@@ -312,70 +312,6 @@
     </div>
   </section>
 
-<!--  
-  <div class="max-w-7xl mx-auto px-4 py-6">
-  <div id="scrollContainer" 
-       class="flex gap-4 overflow-x-auto whitespace-nowrap no-scrollbar scroll-smooth">
-
-    <a href="#decoration" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Decoration
-    </a>
-
-    <a href="#headphones" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Headphones
-    </a>
-
-    <a href="#speakers" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Speakers
-    </a>
-
-    <a href="#watch" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Watch
-    </a>
-
-    <a href="#earbuds" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Earbuds
-    </a>
-
-    <a href="#mouse" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Mouse
-    </a>
-
-  
-    <a href="#decoration" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Decoration
-    </a>
-
-    <a href="#headphones" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Headphones
-    </a>
-     
-    <a href="#decoration" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Decoration
-    </a>
-
-    <a href="#headphones" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Headphones
-    </a>
-   
-    <a href="#decoration" 
-       class="px-4 py-2 bg-gray-100 rounded-md text-sm font-medium hover:bg-gray-200">
-       Decoration
-    </a>
-
-    
-  </div>
-</div> -->
 
 
 
@@ -1214,24 +1150,7 @@
             setTimeout(() => profileOverlay.classList.add("hidden"), 300);
         });
     </script>
-  <script>
-    const scrollContainer = document.getElementById('scrollContainer');
-    let scrollAmount = 0;
-
-    function autoScroll() {
-      scrollAmount += 1;
-      scrollContainer.scrollTo({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-
-      if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-        scrollAmount = 0; // reset to start
-      }
-    }
-
-    setInterval(autoScroll, 30); // adjust speed (lower = faster)
-  </script>
+ 
     <script>
   function openModal(productName) {
     document.getElementById("inquiryModal").classList.remove("hidden");
