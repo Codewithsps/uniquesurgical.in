@@ -186,8 +186,7 @@
 
   </nav>
 
-
- <!-- Wrapper -->
+  <!-- Wrapper -->
   <div class="max-w-7xl mx-auto px-4 py-6">
     <div class="flex flex-col lg:flex-row gap-6">
 
@@ -199,21 +198,21 @@
         <div class="border p-4 rounded-md">
           <h3 class="font-medium mb-2 dark:text-white">CATEGORIES</h3>
           <ul class="space-y-2 text-sm dark:text-white">
-            <li><label><input type="checkbox" class="mr-2 dark:text-white">Men</label></li>
-            <li><label><input type="checkbox" class="mr-2 dark:text-white">Women</label></li>
-            <li><label><input type="checkbox" class="mr-2 dark:text-white">Kids</label></li>
+            <li><label><input type="checkbox" class="filter-checkbox mr-2" value="men">Men</label></li>
+            <li><label><input type="checkbox" class="filter-checkbox mr-2" value="women">Women</label></li>
+            <li><label><input type="checkbox" class="filter-checkbox mr-2" value="kids">Kids</label></li>
           </ul>
         </div>
 
         <!-- Type -->
-        <div class="border p-4 rounded-md">
+        <!-- <div class="border p-4 rounded-md">
           <h3 class="font-medium mb-2 dark:text-white">TYPE</h3>
           <ul class="space-y-2 text-sm dark:text-white">
-            <li><label><input type="checkbox" class="mr-2">Topwear</label></li>
-            <li><label><input type="checkbox" class="mr-2">Bottomwear</label></li>
-            <li><label><input type="checkbox" class="mr-2">Winterwear</label></li>
+            <li><label><input type="checkbox" class="filter-checkbox mr-2" value="topwear">Topwear</label></li>
+            <li><label><input type="checkbox" class="filter-checkbox mr-2" value="bottomwear">Bottomwear</label></li>
+            <li><label><input type="checkbox" class="filter-checkbox mr-2" value="winterwear">Winterwear</label></li>
           </ul>
-        </div>
+        </div> -->
       </aside>
 
       <!-- Main content -->
@@ -223,7 +222,8 @@
         <div class="lg:hidden mb-6">
           <button id="filterToggle" class="flex items-center justify-between w-full border px-4 py-2 rounded-md">
             <span class="font-semibold dark:text-white">FILTERS</span>
-            <svg id="filterArrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg id="filterArrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
@@ -233,105 +233,61 @@
             <div class="border p-4 rounded-md">
               <h3 class="font-medium mb-2 dark:text-white">CATEGORIES</h3>
               <ul class="space-y-2 text-sm dark:text-white">
-                <li><label><input type="checkbox" class="mr-2">Men</label></li>
-                <li><label><input type="checkbox" class="mr-2">Women</label></li>
-                <li><label><input type="checkbox" class="mr-2">Kids</label></li>
+                <li><label><input type="checkbox" class="filter-checkbox mr-2" value="men">Men</label></li>
+                <li><label><input type="checkbox" class="filter-checkbox mr-2" value="women">Women</label></li>
+                <li><label><input type="checkbox" class="filter-checkbox mr-2" value="kids">Kids</label></li>
               </ul>
             </div>
 
             <!-- Type -->
-            <div class="border p-4 rounded-md">
+            <!-- <div class="border p-4 rounded-md">
               <h3 class="font-medium mb-2 dark:text-white">TYPE</h3>
               <ul class="space-y-2 text-sm dark:text-white">
-                <li><label><input type="checkbox" class="mr-2">Topwear</label></li>
-                <li><label><input type="checkbox" class="mr-2">Bottomwear</label></li>
-                <li><label><input type="checkbox" class="mr-2">Winterwear</label></li>
+                <li><label><input type="checkbox" class="filter-checkbox mr-2" value="topwear">Topwear</label></li>
+                <li><label><input type="checkbox" class="filter-checkbox mr-2" value="bottomwear">Bottomwear</label></li>
+                <li><label><input type="checkbox" class="filter-checkbox mr-2" value="winterwear">Winterwear</label></li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
 
         <!-- Title + Sort -->
         <div class="flex justify-between items-center mb-6 dark:text-white">
           <h2 class="text-2xl font-light">ALL <span class="font-semibold">Products</span></h2>
-          <select class="border px-3 py-2 rounded-md text-sm dark:bg-gray-800 dark:border-gray-600 dark:text-white">
-            <option class="dark:text-white">Sort by: Relevant</option>
-            <option  class="dark:text-white">Sort by: Price Low to High</option>
-            <option  class="dark:text-white">Sort by: Price High to Low</option>
-          </select>
         </div>
 
         <!-- Products Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
+        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Product Card Example -->
+          <div class="group product-card" data-category="men" data-type="bottomwear">
+            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png"
+              class="w-full rounded-md">
+            <p class="mt-2 text-sm dark:text-white">Men Slim Fit Trouser</p>
+            <p class="font-semibold dark:text-white">$40</p>
+          </div>
+          
+
+          <div class="group product-card" data-category="women" data-type="topwear">
+            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png"
+              class="w-full rounded-md">
+            <p class="mt-2 text-sm dark:text-white">Women Kurti</p>
+            <p class="font-semibold dark:text-white">$55</p>
+          </div>
+           <div class="group product-card" data-category="women" data-type="topwear">
+            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png"
+              class="w-full rounded-md">
+            <p class="mt-2 text-sm dark:text-white">Women Kurti</p>
+            <p class="font-semibold dark:text-white">$55</p>
           </div>
 
-           <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
-          </div>
+ 
 
-          <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
+          <div class="group product-card" data-category="kids" data-type="winterwear">
+            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png"
+              class="w-full rounded-md">
+            <p class="mt-2 text-sm dark:text-white">Kids Hoodie</p>
+            <p class="font-semibold dark:text-white">$25</p>
           </div>
-
-          <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
-          </div>
-           <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
-          </div>
-           <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
-          </div>
-           <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
-          </div>
-           <!-- Product Card -->
-          <div class="group">
-            <img src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img8.png" 
-                 alt="" 
-                 class="w-full rounded-md transform transition-transform duration-300 group-hover:scale-105 dark:text-white">
-            <p class="mt-2 text-sm dark:text-white">Kid Tapered Slim Fit Trouser</p>
-            <p class="font-semibold dark:text-white">$38</p>
-          </div>
-
-         
         </div>
       </main>
     </div>
@@ -526,12 +482,33 @@
       setTimeout(() => profileOverlay.classList.add("hidden"), 300);
     });
   </script>
-   <!-- JS for Mobile Accordion -->
+  <!-- JS Filter Logic -->
   <script>
+    const checkboxes = document.querySelectorAll('.filter-checkbox');
+    const products = document.querySelectorAll('.product-card');
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const selected = Array.from(checkboxes)
+          .filter(x => x.checked)
+          .map(x => x.value);
+
+        products.forEach(product => {
+          const category = product.dataset.category;
+          const type = product.dataset.type;
+          if (selected.length === 0 || selected.includes(category) || selected.includes(type)) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      });
+    });
+
+    // Mobile filter accordion
     const filterToggle = document.getElementById('filterToggle');
     const mobileFilters = document.getElementById('mobileFilters');
     const filterArrow = document.getElementById('filterArrow');
-
     filterToggle.addEventListener('click', () => {
       mobileFilters.classList.toggle('hidden');
       filterArrow.classList.toggle('rotate-180');
