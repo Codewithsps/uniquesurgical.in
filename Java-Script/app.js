@@ -69,43 +69,35 @@ document.addEventListener("keydown", (ev) => {
   }
 });
 
-// ---------- Dark mode toggle (defensive, and logical icons) ----------
-// Behavior: when site is LIGHT → show *moon* icon (darkIcon) so user can switch to dark.
-// When site is DARK → show *sun* icon (lightIcon) so user can switch to light.
+// ---------- Dark mode toggle (only if user clicks) ----------
+
 (function initThemeToggle() {
-  if (!themeToggleBtn || !lightIcon || !darkIcon) {
-    // missing elements — nothing to do
-    return;
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  const lightIcon = document.getElementById("theme-toggle-light-icon");
+  const darkIcon = document.getElementById("theme-toggle-dark-icon");
+
+  if (!themeToggleBtn || !lightIcon || !darkIcon) return;
+
+  const savedTheme = localStorage.getItem("color-theme"); // 'dark' | 'light' | null
+
+  // --- Apply theme ---
+  function applyTheme(isDark) {
+    document.documentElement.classList.toggle("dark", isDark);
+    lightIcon.classList.toggle("hidden", !isDark); // show sun in dark mode
+    darkIcon.classList.toggle("hidden", isDark);   // show moon in light mode
   }
 
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const saved = localStorage.getItem("color-theme"); // 'dark' or 'light' or null
-  const isDark = saved === "dark" || (saved === null && prefersDark);
+  // Default: Light mode (no dark unless user clicked)
+  applyTheme(savedTheme === "dark");
 
-  if (isDark) {
-    document.documentElement.classList.add("dark");
-    lightIcon.classList.remove("hidden"); // show sun to switch to light
-    darkIcon.classList.add("hidden");
-  } else {
-    document.documentElement.classList.remove("dark");
-    lightIcon.classList.add("hidden");
-    darkIcon.classList.remove("hidden"); // show moon to switch to dark
-  }
-
+  // --- When user clicks, toggle + save preference ---
   themeToggleBtn.addEventListener("click", () => {
-    const nowDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("color-theme", nowDark ? "dark" : "light");
-    if (nowDark) {
-      lightIcon.classList.remove("hidden");
-      darkIcon.classList.add("hidden");
-    } else {
-      lightIcon.classList.add("hidden");
-      darkIcon.classList.remove("hidden");
-    }
+    const isNowDark = !document.documentElement.classList.contains("dark");
+    applyTheme(isNowDark);
+    localStorage.setItem("color-theme", isNowDark ? "dark" : "light");
   });
 })();
+
 // JS to Rotate Messages
 
 document.addEventListener("DOMContentLoaded", () => {
