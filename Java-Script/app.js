@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const images = [
-  "https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg",
-  "https://cdn.pixabay.com/photo/2024/08/22/10/36/ai-generated-8988970_1280.jpg",
+  "https://cdn.pixabay.com/photo/2020/03/03/12/15/mask-4898571_1280.jpg",
   "https://cdn.pixabay.com/photo/2024/08/22/10/37/ai-generated-8988975_1280.jpg",
+  "https://cdn.pixabay.com/photo/2024/09/13/18/24/ai-generated-9045654_1280.jpg",
 ];
 
 let index = 0;
