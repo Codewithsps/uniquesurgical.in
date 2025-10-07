@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Surgical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Style-Css/App.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+     <!-- FontAwesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SwiperJS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+  </head>
+
+  <body class="bg-gray-50 dark:bg-gray-900">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 relative"
+    >
+      <div
+        class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4"
+      >
+        <!-- Left Section -->
+        <div>
+          <!-- Logo + Name -->
+          <a href="./" class="flex items-center space-x-3">
+            <!-- <img
+          src="https://flowbite.com/docs/images/logo.svg"
+          class="h-8"
+          alt="Logo"
+        /> -->
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            >
+              Unique Surgical
+            </span>
+          </a>
+          <div
+            class="hidden sm:flex flex-wrap gap-4 text-gray-700 text-sm mt-1 ml-1"
+          >
+            <span class="flex items-center gap-1 dark:text-white">
+              <i
+                class="fa-solid fa-location-dot text-blue-600 dark:text-white"
+              ></i>
+              New Delhi, Delhi
+            </span>
+            <span class="flex items-center gap-1 dark:text-white">
+              <i
+                class="fa-solid fa-circle-check text-blue-600 dark:text-white dark:text-white"
+              ></i>
+              GST No.-
+              <span class="font-semibold dark:text-white">07XXXXXXXXXX</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Mobile button -->
+        <button
+          id="menu-toggle"
+          aria-controls="mega-menu"
+          aria-expanded="false"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
+        >
+          <span class="sr-only">Open main menu</span>
+          <!-- Hamburger -->
+          <svg
+            id="hamburger-icon"
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+          <!-- Close -->
+          <svg
+            id="close-icon"
+            class="w-5 h-5 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Primary Menu -->
+        <div
+          id="mega-menu"
+          class="hidden w-full md:flex md:w-auto items-center justify-between font-medium"
+        >
+          <ul
+            class="flex flex-col mt-4 md:flex-row md:items-center md:space-x-6 md:mt-0 border rounded-lg bg-gray-50 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="./"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="./about"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+                >About</a
+              >
+            </li>
+
+            <!-- Mega Menu Dropdown -->
+            <li class="relative">
+              <button
+                id="dropdown-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="flex items-center justify-between w-full py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:w-auto md:p-0"
+              >
+                Our Products
+                <svg
+                  class="w-2.5 h-2.5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+                >Download Brochure</a
+              >
+            </li>
+            <!-- <li><a href="#" class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0">Resources</a></li> -->
+            <li>
+              <a
+                href="./contact"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+                >Contact</a
+              >
+            </li>
+
+            <li class="ml-2 hidden md:block">
+              <button
+                id="theme-toggle"
+                type="button"
+                class="p-2 rounded-lg text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
+              >
+                <!-- Sun Icon (Light Mode) -->
+                <i
+                  id="theme-toggle-light-icon"
+                  class="fas fa-sun text-yellow-400 text-lg"
+                ></i>
+
+                <!-- Moon Icon (Dark Mode) -->
+                <i
+                  id="theme-toggle-dark-icon"
+                  class="hidden fas fa-moon text-blue-300 text-lg"
+                ></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mega Menu Dropdown Content -->
+      <div
+        id="dropdown-menu"
+        role="menu"
+        class="absolute left-0 right-0 z-40 mt-1 border-y border-gray-200 dark:border-gray-600 bg-gray-50 md:bg-white dark:bg-gray-800 shadow-lg rounded-b-lg md:rounded-none transform origin-top transition-all duration-200 scale-95 opacity-0 hidden"
+      >
+        <div
+          class="max-w-screen-xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-8 text-gray-900 dark:text-white"
+        >
+          <!-- Column 1 -->
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Laparoscopic Instruments
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Connect with e-commerce and POS platforms.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Urology Equipment
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Personalize campaigns with customer insights.
+                </p>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Column 2 (HIDE 2 items on mobile, show only from sm:)-->
+          <ul class="space-y-4 hidden sm:block">
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Laparoscopic Hand Instruments
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Gain insights with advanced dashboards and KPIs.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Laparoscopic Instruments
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Streamline workflows and manage client relationships.
+                </p>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Column 3  -->
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Endoscope Camera
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Automate campaigns and maximize ROI.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  View All Products
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Enterprise-grade security and compliance tools.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Section with Image Slider -->
+    <section
+      class="max-w-7xl mx-auto px-6 py-12 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-300 rounded-xl"
+    >
+      <!-- LEFT SIDE -->
+      <div
+        class="flex flex-col items-center text-center md:items-start md:text-left space-y-5"
+      >
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 dark:text-gray-100"
+        >
+          Empowering Healthcare<br class="hidden md:block" />
+          <span class="text-teal-700 dark:text-teal-400"
+            >with Precision Surgical Solutions</span
+          >
+        </h1>
+
+        <p
+          class="text-gray-600 dark:text-gray-200 text-base sm:text-lg max-w-md"
+        >
+          Unique Surgical delivers precision surgical instruments and trusted
+          medical solutions for healthcare professionals worldwide — built on
+          quality and innovation.
+        </p>
+
+        <div class="pt-2">
+          <a
+            href="#"
+            class="inline-block px-8 py-3 text-base sm:text-lg rounded-lg border-2 border-teal-700 text-teal-700 font-semibold hover:bg-teal-700 hover:text-white transition-all duration-300 shadow-sm"
+          >
+            Our Services
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE (Enhanced Image Slider) -->
+      <div class="relative group">
+        <div class="overflow-hidden rounded-2xl shadow-2xl relative">
+          <!-- Image with zoom hover -->
+          <img
+            id="slider-image"
+            src="https://cdn.pixabay.com/photo/2017/09/16/19/21/salad-2756467_1280.jpg"
+            alt="Slide"
+            class="w-full h-72 sm:h-80 md:h-[420px] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+          />
+
+          <!-- Gradient overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+          ></div>
+
+          <!-- Overlay content -->
+          <div
+            class="absolute bottom-6 left-5 right-5 text-white backdrop-blur-sm bg-white/10 rounded-xl p-4 shadow-lg"
+          >
+            <h3 class="text-lg font-semibold mb-1">
+              Advanced Surgical Instruments
+            </h3>
+            <p class="text-sm mb-3">
+              Ensuring precision, reliability, and global quality standards.
+            </p>
+            <a
+              href="/shop"
+              class="inline-block bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-4 py-2 rounded-md shadow transition-all"
+            >
+              Shop Now 😀
+            </a>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div
+            class="absolute bottom-3 right-3 flex gap-2 opacity-90 group-hover:opacity-100 transition-all duration-300"
+          >
+            <button
+              id="prev"
+              class="bg-white/80 hover:bg-white text-teal-800 px-3 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-200"
+            >
+              ←
+            </button>
+            <button
+              id="next"
+              class="bg-white/80 hover:bg-white text-teal-800 px-3 py-2 rounded-full shadow-md hover:scale-105 transition-transform duration-200"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- our product -->
+    <section class="bg-gray-50 py-10 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Category Header -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-semibold text-gray-800">Our Products</h2>
+          <a href="#" class="text-sm font-medium text-blue-600 hover:underline"
+            >View All</a
+          >
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                Covidien 10 mm 30 degree
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 1,25,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Angle of View: 30°<br />
+                Sterile / Non
+              </p>
+
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiry Modal -->
+    <div
+      id="inquiryModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+      onclick="closeModal()"
+    >
+      <!-- backdrop click -->
+
+      <!-- Modal Content -->
+      <div
+        class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-md w-full p-5 sm:p-6 mx-4 sm:mx-0 relative"
+        onclick="event.stopPropagation()"
+      >
+        <!-- stop backdrop close when clicking inside -->
+
+        <!-- Close Button -->
+        <button
+          onclick="closeModal()"
+          class="absolute top-3 right-3 text-2xl text-gray-400 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white transition"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+          Product Inquiry
+        </h2>
+        <p
+          id="productName"
+          class="text-sm text-gray-600 dark:text-gray-400 mb-4"
+        ></p>
+
+        <!-- Inquiry Form -->
+        <form class="space-y-3">
+          <div>
+            <label
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >Your Name</label
+            >
+            <input
+              type="text"
+              class="w-full border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-600 transition"
+              required
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div>
+            <label
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="w-full border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-600 transition"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div>
+            <label
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >Phone</label
+            >
+            <input
+              type="tel"
+              class="w-full border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-600 transition"
+              required
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div>
+            <label
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >Message</label
+            >
+            <textarea
+              rows="3"
+              class="w-full border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-600 transition"
+              placeholder="I would like to..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-medium transition duration-200"
+          >
+            Submit Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+   <!-- about us and info section -->
+    <section class="bg-white py-12">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10"
+      >
+        <!-- Left Content -->
+        <div>
+          <h3 class="text-sm font-medium text-gray-500">WELCOME TO</h3>
+          <h2 class="text-3xl font-bold text-blue-700 mt-1">Unique Surgical</h2>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            We specialize in
+            <span class="font-semibold"
+              >Urology Equipment, Laparoscopic Instruments, Laparoscopic Hand
+              Instruments, Laparoscopy Equipment, Ethicon Products, Teleflex
+              Weck, Laparoscopic Trocars, Endoscopy Cameras, and Rigid
+              Endoscopes.</span
+            >
+            <span class="font-medium"
+              >We strongly believe in building long-term relationships with our
+              clients by following ethical business practices and providing
+              uncompromised service.</span
+            >
+          </p>
+
+          <a
+            href="#"
+            class="text-blue-600 font-medium mt-3 block hover:underline"
+            >Read More...</a
+          >
+
+          <p class="mt-4 text-gray-600">GET IN TOUCH WITH US FOR BEST DEALS</p>
+
+          <button
+            class="mt-6 px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg shadow hover:bg-blue-800 transition"
+          >
+            Contact Us
+          </button>
+        </div>
+
+        <!-- Right Info Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/0056d2/handshake.png"
+              class="w-8 h-8"
+              alt="business"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">Nature of Business</h4>
+              <p class="text-sm text-gray-600">Manufacturer</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/0056d2/conference.png"
+              class="w-8 h-8"
+              alt="employees"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">Total Employees</h4>
+              <p class="text-sm text-gray-600">11 to 25 People</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/0056d2/calendar.png"
+              class="w-8 h-8"
+              alt="gst"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">GST Registration Date</h4>
+              <p class="text-sm text-gray-600">21-09-2025</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/0056d2/scales.png"
+              class="w-8 h-8"
+              alt="firm"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">Legal Status of Firm</h4>
+              <p class="text-sm text-gray-600">Proprietorship</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/0056d2/money.png"
+              class="w-8 h-8"
+              alt="turnover"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">Annual Turnover</h4>
+              <p class="text-sm text-gray-600">5 - 5 Cr</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/0056d2/barcode.png"
+              class="w-8 h-8"
+              alt="iec"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">Import Export Code</h4>
+              <p class="text-sm text-gray-600">07XXXXXXXXXX</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/0056d2/qr-code.png"
+              class="w-8 h-8"
+              alt="gst"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">GST No.</h4>
+              <p class="text-sm text-gray-600">07XXXXXXXXXX</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div
+            class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <img
+              src="https://img.icons8.com/color/48/approval.png"
+              class="w-8 h-8"
+              alt="trustseal"
+            />
+            <div>
+              <h4 class="font-semibold text-gray-800">Trustseal Verified</h4>
+              <p class="text-sm text-gray-600">IndiaMART Verified Exporter</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- All products section -->
+    <section class="bg-gray-50 py-10 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Category Header -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-semibold text-gray-800">Our Products</h2>
+          <a href="#" class="text-sm font-medium text-blue-600 hover:underline"
+            >View All</a
+          >
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                Covidien 10 mm 30 degree
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 1,25,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Angle of View: 30°<br />
+                Sterile / Non
+              </p>
+
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img26.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img13.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div
+            class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+          >
+            <img
+              src="https://raw.githubusercontent.com/avinashdm/gs-images/main/forever/p_img13.png"
+              alt="Product"
+              class="w-full h-50 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                PCNL Peanut Jaw Forcep
+              </h3>
+              <p class="text-blue-600 font-bold mt-1">Rs 3,000 / Piece</p>
+              <p class="text-sm text-gray-600 mt-2 dark:text-white">
+                Size: 9 Fr <br />
+                Material: Stainless Steel
+              </p>
+              <button
+                onclick="openModal('PCNL Peanut Jaw Forcep')"
+                class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700"
+              >
+                Get Best Price
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Subscription Section -->
+    <section class="bg-gray-900 py-12 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold text-white">Stay Updated</h2>
+        <p class="mt-3 text-gray-400 text-white">
+          Subscribe to our newsletter and be the first to know about new
+          products and exclusive deals.
+        </p>
+
+        <!-- Form -->
+        <form
+          class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="w-full sm:w-2/3 px-4 py-3 rounded-lg bg-gray-800 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
+            required
+          />
+          <button
+            type="submit"
+            class="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:opacity-90 transition"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-50 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-10">
+          <h2 class="text-3xl font-bold text-gray-900">Testimonials</h2>
+          <div class="flex gap-3">
+            <button
+              class="swiper-button-prev-custom w-10 h-10 flex items-center justify-center rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition"
+            >
+              ←
+            </button>
+            <button
+              class="swiper-button-next-custom w-10 h-10 flex items-center justify-center rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper testimonialSwiper">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div
+                class="p-6 border border-gray-200 rounded-xl bg-white shadow-sm hover:shadow-md transition"
+              >
+                <!-- Stars -->
+                <div class="flex text-yellow-500 mb-4">★★★★★</div>
+                <p class="text-gray-700 mb-6">
+                  I was hesitant to try this at first, but I’m so glad I did –
+                  it’s exceeded all my expectations.
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div>
+                    <h4 class="font-semibold text-gray-900">Harsh P.</h4>
+                    <p class="text-sm text-gray-500">Product Designer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div
+                class="p-6 border border-gray-200 rounded-xl bg-white shadow-sm hover:shadow-md transition"
+              >
+                <!-- Stars -->
+                <div class="flex text-yellow-500 mb-4">★★★★★</div>
+                <p class="text-gray-700 mb-6">
+                  I was hesitant to try this at first, but I’m so glad I did –
+                  it’s exceeded all my expectations.
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div>
+                    <h4 class="font-semibold text-gray-900">Harsh P.</h4>
+                    <p class="text-sm text-gray-500">Product Designer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div
+                class="p-6 border border-gray-200 rounded-xl bg-white shadow-sm hover:shadow-md transition"
+              >
+                <!-- Stars -->
+                <div class="flex text-yellow-500 mb-4">★★★★★</div>
+                <p class="text-gray-700 mb-6">
+                  I was hesitant to try this at first, but I’m so glad I did –
+                  it’s exceeded all my expectations.
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div>
+                    <h4 class="font-semibold text-gray-900">Harsh P.</h4>
+                    <p class="text-sm text-gray-500">Product Designer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div
+                class="p-6 border border-gray-200 rounded-xl bg-white shadow-sm hover:shadow-md transition"
+              >
+                <div class="flex text-yellow-500 mb-4">★★★★★</div>
+                <p class="text-gray-700 mb-6">
+                  Stands out as the most user-friendly and effective solution
+                  I’ve ever used.
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/45.jpg"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div>
+                    <h4 class="font-semibold text-gray-900">Alex K.</h4>
+                    <p class="text-sm text-gray-500">Design Lead</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div
+                class="p-6 border border-gray-200 rounded-xl bg-white shadow-sm hover:shadow-md transition"
+              >
+                <div class="flex text-yellow-500 mb-4">★★★★★</div>
+                <p class="text-gray-700 mb-6">
+                  Simply the best tool of investment in the market right now.
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/65.jpg"
+                    class="w-12 h-12 rounded-full"
+                  />
+                  <div>
+                    <h4 class="font-semibold text-gray-900">Jane D.</h4>
+                    <p class="text-sm text-gray-500">CEO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="hidden md:block bg-gray-900 text-white mt-4">
+      <!-- Bottom Footer -->
+      <div class="bg-gray-100 text-gray-700 py-6">
+        <div class="text-center text-sm">
+          © Unique Surgical. All Rights Reserved.
+          <a href="#" class="hover:underline">Terms of Use</a> | Developed &
+          Managed by <span class="font-semibold">Codewithsps</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom Navigation Mobile devics -->
+    <div
+      class="fixed bottom-0 left-0 w-full bg-white border-t shadow-lg md:hidden z-50"
+    >
+      <div class="flex justify-around items-center py-2 text-sm text-gray-700">
+        <a href="#" class="flex flex-col items-center text-blue-600">
+          <i class="fas fa-home text-lg mb-1"></i>
+          Home
+        </a>
+
+        <!-- Profile Button -->
+        <button
+          id="profileBtn"
+          class="flex flex-col items-center focus:outline-none"
+        >
+          <i class="fas fa-user text-lg mb-1"></i>
+          Profile
+        </button>
+
+        <!-- Our Range Button -->
+        <button
+          id="ourRange"
+          class="flex flex-col items-center focus:outline-none"
+        >
+          <i class="fas fa-th-large text-lg mb-1"></i>
+          Our Range
+        </button>
+
+        <a href="./contact" class="flex flex-col items-center">
+          <i class="fas fa-envelope text-lg mb-1"></i>
+          Contact
+        </a>
+        <a href="tel:+918920489022" class="flex flex-col items-center">
+          <i class="fas fa-phone text-lg mb-1"></i>
+          Call Us
+        </a>
+      </div>
+    </div>
+
+    <!--Bottom Navigation Overlay for Our Range -->
+    <div
+      id="rangeOverlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-end"
+    >
+      <div
+        id="drawerRange"
+        class="bg-white w-full max-h-[80%] rounded-t-2xl shadow-lg transform translate-y-full transition-transform duration-300 ease-in-out overflow-hidden"
+      >
+        <!-- Header -->
+        <div
+          class="sticky top-0 bg-white z-10 flex justify-between items-center border-b pb-2 px-4 pt-2"
+        >
+          <h2 class="text-lg font-semibold text-blue-600">
+            PRODUCT & SERVICES
+          </h2>
+          <button id="closeOverlayRange" class="text-gray-600 text-2xl">
+            &times;
+          </button>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="overflow-y-auto max-h-[70vh] p-4">
+          <ul class="space-y-3 text-gray-700">
+            <li>
+              <a
+                href="./product"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC INSTRUMENTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >UROLOGY EQUIPMENT SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC HAND INSTRUMENTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC INSTRUMENTS SUPPLIER</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPY EQUIPMENT SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >ETHICON SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >ENDOSCOPY CAMERA</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC TROCAR SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >TELEFLEX WECK</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >RIGID ENDOSCOPE</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC CAMERA SUPPLIER</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >COVIDIEN PRODUCT</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay for Profile -->
+    <div
+      id="profileOverlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-end"
+    >
+      <div
+        id="drawerProfile"
+        class="bg-white w-full max-h-[80%] rounded-t-2xl shadow-lg transform translate-y-full transition-transform duration-300 ease-in-out overflow-hidden"
+      >
+        <!-- Header -->
+        <div
+          class="sticky top-0 bg-white z-10 flex justify-between items-center border-b pb-2 px-4 pt-2"
+        >
+          <h2 class="text-lg font-semibold text-blue-600">COMPANY PROFILE</h2>
+          <button id="closeOverlayProfile" class="text-gray-600 text-2xl">
+            &times;
+          </button>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="overflow-y-auto max-h-[50vh] px-1 py-1 text-gray-700">
+          <!-- Menu List -->
+          <ul class="space-y-1">
+            <li>
+              <a
+                href="./about"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="./product"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >Testimonial</a
+              >
+            </li>
+            <li>
+              <a
+                href="./product"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >Infrastructure & Facilties</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+
+    <div
+      class="fixed bottom-1 right-6 flex flex-col items-end space-y-2 z-10 hidden md:flex"
+    >
+      <!-- Bubble -->
+      <div
+        id="whatsapp-bubble"
+        class="relative hidden bg-white dark:bg-gray-800 text-gray-800 dark:text-white px-4 py-3 rounded-xl shadow-lg animate-fade-in max-w-xs"
+      >
+        <div class="flex items-start space-x-2">
+          <div class="flex-shrink-0">
+            <div
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+            >
+              <svg
+                class="w-5 h-5 text-gray-600 dark:text-gray-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 10a4 4 0 110-8 4 4 0 010 8zM2 18a8 8 0 1116 0H2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="text-sm font-medium" id="bubble-text">
+            💬 Surgical instruments & solutions.
+          </div>
+        </div>
+
+        <div
+          class="absolute right-4 -bottom-2 w-3 h-3 bg-white dark:bg-gray-800 transform rotate-45"
+        ></div>
+      </div>
+
+      <!-- WhatsApp Button -->
+      <a
+        href="https://wa.me/918920489022"
+        target="_blank"
+        class="w-14 h-14 flex items-center justify-center bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition"
+      >
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </a>
+    </div>
+
+    <script src="Java-Script/app.js"></script>
+    <!-- Swiper JS -->
+    <script>
+      var swiper = new Swiper(".testimonialSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+      });
+    </script>
+  </body>
+</html>

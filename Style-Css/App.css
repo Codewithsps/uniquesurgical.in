@@ -1,0 +1,4 @@
+#slider-image {
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}

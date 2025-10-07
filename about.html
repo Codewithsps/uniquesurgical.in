@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Surgical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+  </head>
+
+  <body class="bg-gray-50 dark:bg-gray-900">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 relative"
+    >
+      <div
+        class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4"
+      >
+        <!-- Left Section -->
+        <div>
+          <!-- Logo + Name -->
+          <a href="./" class="flex items-center space-x-3">
+            <!-- <img
+          src="https://flowbite.com/docs/images/logo.svg"
+          class="h-8"
+          alt="Logo"
+        /> -->
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            >
+              Unique Surgical
+            </span>
+          </a>
+          <div
+            class="hidden sm:flex flex-wrap gap-4 text-gray-700 text-sm mt-1 ml-1"
+          >
+            <span class="flex items-center gap-1 dark:text-white">
+              <i
+                class="fa-solid fa-location-dot text-blue-600 dark:text-white"
+              ></i>
+              New Delhi, Delhi
+            </span>
+            <span class="flex items-center gap-1 dark:text-white">
+              <i
+                class="fa-solid fa-circle-check text-blue-600 dark:text-white dark:text-white"
+              ></i>
+              GST No.-
+              <span class="font-semibold dark:text-white">07XXXXXXXXXX</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Mobile button -->
+        <button
+          id="menu-toggle"
+          aria-controls="mega-menu"
+          aria-expanded="false"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
+        >
+          <span class="sr-only">Open main menu</span>
+          <!-- Hamburger -->
+          <svg
+            id="hamburger-icon"
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+          <!-- Close -->
+          <svg
+            id="close-icon"
+            class="w-5 h-5 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Primary Menu -->
+        <div
+          id="mega-menu"
+          class="hidden w-full md:flex md:w-auto items-center justify-between font-medium"
+        >
+          <ul
+            class="flex flex-col mt-4 md:flex-row md:items-center md:space-x-6 md:mt-0 border rounded-lg bg-gray-50 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="./"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="./about"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+                >About</a
+              >
+            </li>
+
+            <!-- Mega Menu Dropdown -->
+            <li class="relative">
+              <button
+                id="dropdown-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="flex items-center justify-between w-full py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:w-auto md:p-0"
+              >
+                Our Products
+                <svg
+                  class="w-2.5 h-2.5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+                >Download Brochure</a
+              >
+            </li>
+            <!-- <li><a href="#" class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0">Resources</a></li> -->
+            <li>
+              <a
+                href="./contact"
+                class="block py-2 px-3 text-black dark:text-white rounded hover:text-blue-600 md:p-0"
+                >Contact</a
+              >
+            </li>
+
+            <li class="ml-2 hidden md:block">
+              <button
+                id="theme-toggle"
+                type="button"
+                class="p-2 rounded-lg text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
+              >
+                <!-- Sun Icon (Light Mode) -->
+                <i
+                  id="theme-toggle-light-icon"
+                  class="fas fa-sun text-yellow-400 text-lg"
+                ></i>
+
+                <!-- Moon Icon (Dark Mode) -->
+                <i
+                  id="theme-toggle-dark-icon"
+                  class="hidden fas fa-moon text-blue-300 text-lg"
+                ></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mega Menu Dropdown Content -->
+      <div
+        id="dropdown-menu"
+        role="menu"
+        class="absolute left-0 right-0 z-40 mt-1 border-y border-gray-200 dark:border-gray-600 bg-gray-50 md:bg-white dark:bg-gray-800 shadow-lg rounded-b-lg md:rounded-none transform origin-top transition-all duration-200 scale-95 opacity-0 hidden"
+      >
+        <div
+          class="max-w-screen-xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-8 text-gray-900 dark:text-white"
+        >
+          <!-- Column 1 -->
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Laparoscopic Instruments
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Connect with e-commerce and POS platforms.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Urology Equipment
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Personalize campaigns with customer insights.
+                </p>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Column 2 (HIDE 2 items on mobile, show only from sm:)-->
+          <ul class="space-y-4 hidden sm:block">
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Laparoscopic Hand Instruments
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Gain insights with advanced dashboards and KPIs.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Laparoscopic Instruments
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Streamline workflows and manage client relationships.
+                </p>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Column 3  -->
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  Endoscope Camera
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Automate campaigns and maximize ROI.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group block p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              >
+                <div class="font-semibold group-hover:text-blue-600">
+                  View All Products
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Enterprise-grade security and compliance tools.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+     <!-- about us section -->
+    <section class="max-w-screen-xl mx-auto px-4 py-12">
+      <!-- Title -->
+      <h2
+        class="text-2xl md:text-3xl font-bold text-center text-gray-800 dark:text-white mb-8"
+      >
+        ABOUT <span class="text-blue-600">US</span>
+        <div class="w-20 h-0.5 bg-gray-300 mx-auto mt-2"></div>
+      </h2>
+
+      <!-- Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Image -->
+        <div>
+          <img
+            src="https://cdn.pixabay.com/photo/2017/03/31/07/25/pumpkin-2190584_1280.jpg"
+            alt="About Us"
+            class="w-full rounded-lg shadow-md object-cover"
+          />
+        </div>
+
+        <!-- Text -->
+        <div class="text-gray-700 dark:text-gray-300 space-y-4">
+          <p>
+            Established in the year of 2021, We
+            <strong>“Medcity Surgicals”</strong> are Manufacturer and Exporter
+            of Urology Equipment, Laparoscopic Instruments, Hand Instruments,
+            Endoscopy Cameras, Rigid Endoscopes and more. We focus on quality
+            excellence and transparency in every business deal to maintain
+            strong customer relations.
+          </p>
+
+          <p>
+            <strong></strong>
+          </p>
+
+          <!-- Factsheet -->
+          <div>
+            <h3
+              class="font-semibold text-lg text-gray-900 dark:text-white mb-4"
+            >
+              Factsheet
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+              <!-- Basic Info -->
+              <div class="space-y-2">
+                <h4 class="font-bold text-gray-800 dark:text-gray-100">
+                  Basic Information
+                </h4>
+                <p>
+                  <span class="font-medium">Nature of Business:</span>
+                  Manufacturer
+                </p>
+                <p>
+                  <span class="font-medium">Additional Business:</span> Supplier
+                  of Services, Retail & Wholesale
+                </p>
+
+                <p>
+                  <span class="font-medium">Address:</span> C-54, Pandav Nagar,
+                  New Delhi, India
+                </p>
+                <p><span class="font-medium">Employees:</span> 5–10 People</p>
+                <p>
+                  <span class="font-medium">GST Registration:</span> 19-06-2021
+                </p>
+                <p>
+                  <span class="font-medium">Legal Status:</span> Proprietorship
+                </p>
+                <p>
+                  <span class="font-medium">Annual Turnover:</span> ₹5 – 25 Cr
+                </p>
+              </div>
+
+              <!-- Trade & Market -->
+              <div class="space-y-2">
+                <h4 class="font-bold text-gray-800 dark:text-gray-100">
+                  Trade & Market
+                </h4>
+                <p>
+                  <span class="font-medium">Export Percentage:</span> 40–60%
+                </p>
+
+                <h4 class="font-bold text-gray-800 dark:text-gray-100 mt-4">
+                  Statutory Profile
+                </h4>
+                <p><span class="font-medium">IEC:</span> KXDPS9154R</p>
+                <p>
+                  <span class="font-medium">Banker:</span> Axis Bank, Bank of
+                  Baroda
+                </p>
+                <p><span class="font-medium">GST No:</span> 07XXXXXXXXXX</p>
+                <p>
+                  <span class="font-medium">UDYAM No:</span>
+                  UDYAM-DL-02-07XXXXXXXXXX
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="max-w-screen-xl mx-auto px-4 py-12">
+    
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white text-center mb-10">
+      WHY <span class="text-blue-600">CHOOSE US</span>
+      <div class="w-24 h-0.5 bg-gray-300 mx-auto mt-2"></div>
+    </h2>
+
+   
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+     
+      <div class="border rounded-lg p-6 bg-white dark:bg-gray-900 shadow-sm">
+        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Quality Assurance:</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          We meticulously select and vet each product to ensure it meets our stringent quality standards.
+        </p>
+      </div>
+
+     
+      <div class="border rounded-lg p-6 bg-white dark:bg-gray-900 shadow-sm">
+        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Convenience:</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          With our user-friendly interface and hassle-free ordering process, shopping has never been easier.
+        </p>
+      </div>
+
+     
+      <div class="border rounded-lg p-6 bg-white dark:bg-gray-900 shadow-sm mt-50">
+        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Exceptional Customer Service:</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Our team of dedicated professionals is here to assist you every step of the way, ensuring your satisfaction is
+          our top priority.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <!-- Bottom Footer -->
+      <div class="bg-gray-100 text-gray-700 py-6">
+        <div class="text-center text-sm">
+          © Unique Surgical. All Rights Reserved.
+          <a href="#" class="hover:underline">Terms of Use</a> | Developed &
+          Managed by <span class="font-semibold">Codewithsps</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom Navigation -->
+    <div
+      class="fixed bottom-0 left-0 w-full bg-white border-t shadow-lg md:hidden z-50"
+    >
+      <div class="flex justify-around items-center py-2 text-sm text-gray-700">
+        <a href="./" class="flex flex-col items-center text-blue-600">
+          <i class="fas fa-home text-lg mb-1"></i>
+          Home
+        </a>
+
+        <!-- Profile Button -->
+        <button
+          id="profileBtn"
+          class="flex flex-col items-center focus:outline-none"
+        >
+          <i class="fas fa-user text-lg mb-1"></i>
+          Profile
+        </button>
+
+        <!-- Our Range Button -->
+        <button
+          id="ourRange"
+          class="flex flex-col items-center focus:outline-none"
+        >
+          <i class="fas fa-th-large text-lg mb-1"></i>
+          Our Range
+        </button>
+
+        <a href="#" class="flex flex-col items-center">
+          <i class="fas fa-envelope text-lg mb-1"></i>
+          Contact
+        </a>
+        <a href="tel:+911234567890" class="flex flex-col items-center">
+          <i class="fas fa-phone text-lg mb-1"></i>
+          Call Us
+        </a>
+      </div>
+    </div>
+
+    <!-- Overlay for Our Range -->
+    <div
+      id="rangeOverlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-end"
+    >
+      <div
+        id="drawerRange"
+        class="bg-white w-full max-h-[80%] rounded-t-2xl shadow-lg transform translate-y-full transition-transform duration-300 ease-in-out overflow-hidden"
+      >
+        <!-- Header -->
+        <div
+          class="sticky top-0 bg-white z-10 flex justify-between items-center border-b pb-2 px-4 pt-2"
+        >
+          <h2 class="text-lg font-semibold text-blue-600">
+            PRODUCT & SERVICES
+          </h2>
+          <button id="closeOverlayRange" class="text-gray-600 text-2xl">
+            &times;
+          </button>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="overflow-y-auto max-h-[70vh] p-4">
+          <ul class="space-y-3 text-gray-700">
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC INSTRUMENTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >UROLOGY EQUIPMENT SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC HAND INSTRUMENTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC INSTRUMENTS SUPPLIER</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPY EQUIPMENT SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >ETHICON SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >ENDOSCOPY CAMERA</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC TROCAR SUPPLIERS</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >TELEFLEX WECK</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >RIGID ENDOSCOPE</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >LAPAROSCOPIC CAMERA SUPPLIER</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >COVIDIEN PRODUCT</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay for Profile -->
+    <div
+      id="profileOverlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-end"
+    >
+      <div
+        id="drawerProfile"
+        class="bg-white w-full max-h-[80%] rounded-t-2xl shadow-lg transform translate-y-full transition-transform duration-300 ease-in-out overflow-hidden"
+      >
+        <!-- Header -->
+        <div
+          class="sticky top-0 bg-white z-10 flex justify-between items-center border-b pb-2 px-4 pt-2"
+        >
+          <h2 class="text-lg font-semibold text-blue-600">COMPANY PROFILE</h2>
+          <button id="closeOverlayProfile" class="text-gray-600 text-2xl">
+            &times;
+          </button>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="overflow-y-auto max-h-[50vh] px-1 py-1 text-gray-700">
+          <!-- Menu List -->
+          <ul class="space-y-1">
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >Account Settings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >Help & Support</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block hover:bg-blue-50 px-4 py-2 rounded-md cursor-pointer"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FontAwesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <div
+      class="fixed bottom-1 right-6 flex flex-col items-end space-y-2 z-10 hidden md:flex"
+    >
+      <!-- Bubble -->
+      <div
+        id="whatsapp-bubble"
+        class="relative hidden bg-white dark:bg-gray-800 text-gray-800 dark:text-white px-4 py-3 rounded-xl shadow-lg animate-fade-in max-w-xs"
+      >
+        <div class="flex items-start space-x-2">
+          <div class="flex-shrink-0">
+            <div
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+            >
+              <svg
+                class="w-5 h-5 text-gray-600 dark:text-gray-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 10a4 4 0 110-8 4 4 0 010 8zM2 18a8 8 0 1116 0H2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="text-sm font-medium" id="bubble-text">
+            💬 Surgical instruments & solutions.
+          </div>
+        </div>
+
+        <div
+          class="absolute right-4 -bottom-2 w-3 h-3 bg-white dark:bg-gray-800 transform rotate-45"
+        ></div>
+      </div>
+
+      <!-- WhatsApp Button -->
+      <a
+        href="https://wa.me/919999999999"
+        target="_blank"
+        class="w-14 h-14 flex items-center justify-center bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition"
+      >
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </a>
+    </div>
+
+    <script src="Java-Script/app.js"></script>
+  </body>
+</html>
