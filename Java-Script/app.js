@@ -222,37 +222,8 @@ filterToggle.addEventListener("click", () => {
   filterArrow.classList.toggle("rotate-180");
 });
 
-// Range Drawer
-const ourRange = document.getElementById("ourRange");
-const rangeOverlay = document.getElementById("rangeOverlay");
-const drawerRange = document.getElementById("drawerRange");
-const closeOverlayRange = document.getElementById("closeOverlayRange");
 
-ourRange.addEventListener("click", () => {
-  rangeOverlay.classList.remove("hidden");
-  setTimeout(() => drawerRange.classList.remove("translate-y-full"), 10);
-});
 
-closeOverlayRange.addEventListener("click", () => {
-  drawerRange.classList.add("translate-y-full");
-  setTimeout(() => rangeOverlay.classList.add("hidden"), 300);
-});
-
-// Profile Drawer
-const profileBtn = document.getElementById("profileBtn");
-const profileOverlay = document.getElementById("profileOverlay");
-const drawerProfile = document.getElementById("drawerProfile");
-const closeOverlayProfile = document.getElementById("closeOverlayProfile");
-
-profileBtn.addEventListener("click", () => {
-  profileOverlay.classList.remove("hidden");
-  setTimeout(() => drawerProfile.classList.remove("translate-y-full"), 10);
-});
-
-closeOverlayProfile.addEventListener("click", () => {
-  drawerProfile.classList.add("translate-y-full");
-  setTimeout(() => profileOverlay.classList.add("hidden"), 300);
-});
 
 // Modal Logic Product Inquiry
 function openModal(productName) {
@@ -279,3 +250,6 @@ var swiper = new Swiper(".testimonialSwiper", {
     prevEl: ".swiper-button-prev-custom",
   },
 });
+
+
+
