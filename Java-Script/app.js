@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const images = [
-  "https://cdn.pixabay.com/photo/2021/06/08/11/27/mushrooms-6320451_1280.jpg",
-  "https://cdn.pixabay.com/photo/2025/09/07/16/17/ornamental-gourds-9820797_1280.jpg",
-  "https://cdn.pixabay.com/photo/2017/03/31/07/25/pumpkin-2190584_1280.jpg",
+  "https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg",
+  "https://cdn.pixabay.com/photo/2024/08/22/10/36/ai-generated-8988970_1280.jpg",
+  "https://cdn.pixabay.com/photo/2024/08/22/10/37/ai-generated-8988975_1280.jpg",
 ];
 
 let index = 0;
